@@ -1,12 +1,3 @@
---[[
-在此声明：
-针对神乐的抄袭行为，创意工坊没有相关防抄袭的规定，鄙人无能为力
-此人将开源堂而皇之地作为自己抄袭的借口，其脸皮之厚，令鄙人叹为观止
-做人做事要有最基本的底线，尊重他人劳动成果
-要借鉴甚至抄鄙人拙劣的代码，可以，请询问鄙人并在您的mod说明中写上致谢声明并附上链接
-让我们维护一个更好的创意工坊！！！
-]]
-
 local TheNet = GLOBAL.TheNet
 local lang = TheNet:GetDefaultServerLanguage()
 
@@ -215,3 +206,11 @@ end
 
 AddPrefabPostInit("world", HoundAttack)
 AddPrefabPostInit("cave", WormAttack)
+
+local function AddBossView(self)
+    local BossWidget = require "widgets/bosswidget"
+    self.boss_widget = self.topleft_root:AddChild(BossWidget())
+    self.boss_widget:SetPosition(20, -20)
+end
+
+AddClassPostConstruct("widgets/controls", AddBossView)

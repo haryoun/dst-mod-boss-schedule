@@ -1,12 +1,20 @@
--- This information tells other players more about the mod
-name = "Boss Announcement"
+name = "Boss Schedule"
 description = ""
-author = "辣椒小皇纸"
-version = "1.3.2"
+author = "haryoun"
+version = "1.0.0"
+
+
+dst_compatible = true
+dont_starve_compatible = false
+reign_of_giants_compatible = false
+hamlet_compatible = false
+forge_compatible = false
 
 all_clients_require_mod = false
 client_only_mod = false
-dst_compatible = true
 
 icon_atlas = "modicon.xml"
 icon = "modicon.tex"
+
+server_filter_tags = {}
+configuration_options = {}
